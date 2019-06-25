@@ -41,13 +41,17 @@
                                 <rect key="frame" x="355" y="102" width="32" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="save"/>
+                                <connections>
+                                    <action selector="savePhotoTapped:" destination="NAg-5u-oRQ" eventType="touchUpInside" id="uPS-i1-SiA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G36-hc-W3M">
                                 <rect key="frame" x="273" y="532" width="87" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="photo library"/>
                                 <connections>
-                                    <action selector="photoLibraryTapped:" destination="NAg-5u-oRQ" eventType="touchUpInside" id="gtr-V9-ydi"/>
+                                    <action selector="photoLibraryTapped:" destination="NAg-5u-oRQ" eventType="touchUpInside" id="chq-RS-vT1"/>
+                                    <action selector="savePhotoTapped:" destination="NAg-5u-oRQ" eventType="touchUpInside" id="ymd-l6-XuS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -56,6 +60,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="add new photo" id="r8a-5u-H6c"/>
                     <connections>
+                        <outlet property="captionText" destination="avp-dL-UCX" id="UO5-5N-nxH"/>
                         <outlet property="imageView" destination="Rfp-N4-i20" id="sE5-Mb-Ssu"/>
                     </connections>
                 </viewController>
@@ -66,8 +71,8 @@
         <!--ViewFinder-->
         <scene sceneID="J6H-tk-y41">
             <objects>
-                <tableViewController id="7wu-Fm-UYT" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Exc-Ko-xVc">
+                <tableViewController id="7wu-Fm-UYT" customClass="PostTableViewController" customModule="ViewFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Exc-Ko-xVc" customClass="PostTable" customModule="ViewFinder">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
