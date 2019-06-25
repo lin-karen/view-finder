@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		18ED04FC22C25CA500FA4732 /* PostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED04FB22C25CA500FA4732 /* PostTableViewController.swift */; };
+		18ED04FE22C29AC600FA4732 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED04FD22C29AC600FA4732 /* PhotoDetailViewController.swift */; };
 		18EDEBBF22C1407C00A03DB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EDEBBE22C1407C00A03DB5 /* AppDelegate.swift */; };
 		18EDEBC422C1407C00A03DB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18EDEBC222C1407C00A03DB5 /* Main.storyboard */; };
 		18EDEBC722C1407D00A03DB5 /* ViewFinder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18EDEBC522C1407C00A03DB5 /* ViewFinder.xcdatamodeld */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		18ED04FB22C25CA500FA4732 /* PostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewController.swift; sourceTree = "<group>"; };
+		18ED04FD22C29AC600FA4732 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		18EDEBBB22C1407C00A03DB5 /* ViewFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18EDEBBE22C1407C00A03DB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18EDEBC322C1407C00A03DB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			children = (
 				18EDEBBE22C1407C00A03DB5 /* AppDelegate.swift */,
 				18EDEBC222C1407C00A03DB5 /* Main.storyboard */,
+				18ED04FD22C29AC600FA4732 /* PhotoDetailViewController.swift */,
 				18ED04FB22C25CA500FA4732 /* PostTableViewController.swift */,
 				18EDEBC822C1407F00A03DB5 /* Assets.xcassets */,
 				18EDEBCA22C1407F00A03DB5 /* LaunchScreen.storyboard */,
@@ -265,6 +268,7 @@
 				18EDEBF222C1515500A03DB5 /* AddPhotosViewController.swift in Sources */,
 				18ED04FC22C25CA500FA4732 /* PostTableViewController.swift in Sources */,
 				18EDEBC722C1407D00A03DB5 /* ViewFinder.xcdatamodeld in Sources */,
+				18ED04FE22C29AC600FA4732 /* PhotoDetailViewController.swift in Sources */,
 				18EDEBBF22C1407C00A03DB5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
