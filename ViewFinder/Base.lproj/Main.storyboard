@@ -13,7 +13,7 @@
         <!--add new photo-->
         <scene sceneID="rDD-Ea-g4y">
             <objects>
-                <viewController id="NAg-5u-oRQ" sceneMemberID="viewController">
+                <viewController id="NAg-5u-oRQ" customClass="AddPhotosViewController" customModule="ViewFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZZu-B4-XoH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,26 +22,14 @@
                                 <rect key="frame" x="61" y="532" width="51" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="camera"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G36-hc-W3M">
-                                <rect key="frame" x="164" y="455" width="87" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="photo library"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OoH-0q-jGQ">
-                                <rect key="frame" x="307" y="532" width="50" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="albums"/>
+                                <connections>
+                                    <action selector="cameraTapped:" destination="NAg-5u-oRQ" eventType="touchUpInside" id="fDD-5U-95g"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="338408c5ab47a0537a3fb7ebb18fbe01-2" translatesAutoresizingMaskIntoConstraints="NO" id="Rfp-N4-i20">
                                 <rect key="frame" x="87" y="140" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAH-QM-ufM">
-                                <rect key="frame" x="355" y="102" width="32" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="save"/>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="avp-dL-UCX">
                                 <rect key="frame" x="159" y="417" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -49,11 +37,27 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAH-QM-ufM">
+                                <rect key="frame" x="355" y="102" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="save"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G36-hc-W3M">
+                                <rect key="frame" x="273" y="532" width="87" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="photo library"/>
+                                <connections>
+                                    <action selector="photoLibraryTapped:" destination="NAg-5u-oRQ" eventType="touchUpInside" id="gtr-V9-ydi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="JSC-PC-JCe"/>
                     </view>
                     <navigationItem key="navigationItem" title="add new photo" id="r8a-5u-H6c"/>
+                    <connections>
+                        <outlet property="imageView" destination="Rfp-N4-i20" id="sE5-Mb-Ssu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Gf-au-dVH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -85,7 +89,7 @@
                     <navigationItem key="navigationItem" title="ViewFinder" id="NQj-iS-nMl">
                         <barButtonItem key="rightBarButtonItem" title="+" id="0bf-Cp-H2j">
                             <connections>
-                                <segue destination="NAg-5u-oRQ" kind="show" id="Q53-mr-NDj"/>
+                                <segue destination="NAg-5u-oRQ" kind="show" id="8Hm-bA-0Jf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
